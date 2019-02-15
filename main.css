@@ -441,8 +441,65 @@ header {
 }
 
 #contact {
-  width: 100%;
-  height: 50vh;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 70%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form,
+.contact-links {
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+
+  color: var(--clr-offwhite);
+}
+
+.contact-form {
+  border-radius: 5rem 0 0 5rem;
+  background: var(--clr-primary);
+  flex: 5;
+}
+
+.form--item {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form--item input,
+.form--item textarea {
+  flex-basis: 100%;
+}
+
+.form--item input {
+  padding: .5rem 0;
+}
+
+.form--item label {
+  margin-bottom: .5rem;
+  font-size: 1.9;
+}
+
+.contact-form [type="submit"] {
+  padding: 1rem;
+
+}
+
+.contact-links {
+  border-radius: 0 5rem 5rem 0;
+  background: var(--clr-accent2);
+  flex: 2;
+}
+
+.contact-links ul li {
+  font-size: 1.9rem;
 }
 
 footer {
