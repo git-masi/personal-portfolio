@@ -51,7 +51,6 @@ button:focus {
   cursor: pointer;
   border: none;
   outline:0;
-  background: none;
   color: inherit;
   font-size: inherit;
 }
@@ -395,10 +394,9 @@ header {
 
 #projects {
   padding: 1rem 0 10rem 0;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: space-around;
-  /* align-items: center; */
   background: linear-gradient(to bottom right, var(--clr-accent), var(--clr-accent2));
   border-bottom-left-radius: 50% 15%;
   border-bottom-right-radius: 50% 15%;
@@ -417,16 +415,35 @@ header {
   flex-basis: 27%;
 }
 
-.card-btn {
-  width: 100%;
+.card-btn,
+.card-link {
+  padding: 1rem;
+  width: 35%;
+  text-align: center;
+
+  border-radius: 5rem;
+  background: var(--clr-offwhite);
+  color: var(--clr-primary-dark2);
+  
+  transition: all 300ms;
 }
 
-.card-link {
-  width: 100%;
+.card-btn:hover,
+.card-link:hover {
+  transform: translateY(-1rem);
+  box-shadow: 0 .7rem 1rem rgba(0,0,0,.5);
+}
+
+.card-btn:active,
+.card-link:active {
+  background: var(--clr-offwhite);
+  transform: translateY(-.4rem);
+  box-shadow: 0 .3rem .6rem rgba(0,0,0,.5);
 }
 
 .card:nth-of-type(odd){
   background: var(--clr-primary);
+  /* background: linear-gradient(to bottom, var(--clr-primary) 80%, transparent); */
 }
 
 .card:nth-of-type(even){
@@ -544,7 +561,7 @@ header {
   width: 68%;
 
   border-radius: 0 5rem 5rem 0;
-  background: linear-gradient(to right, var(--clr-primary-light), var(--clr-primary) 30%);
+  background: linear-gradient(to right, transparent, var(--clr-primary) 30%);
 
   opacity: 0;
   transform: scaleX(0);
