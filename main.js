@@ -54,3 +54,16 @@ navDOM.addEventListener('mouseleave', () => {
     navDOM.style.opacity = .6;
   }
 });
+
+// project section
+
+const tileIMGs = document.querySelectorAll('.flex-tile > .img');
+const nounArr = ['flower', 'temple', 'food', 'water', 'matsuri', 'mountain'];
+const tileTextHeader = document.querySelectorAll('.text--header');
+const tileTextBody = document.querySelectorAll('.text--body');
+
+for (let i = 0; i < tileIMGs.length; i++){
+  document.querySelectorAll('.flex-tile > .img')[i].style.background = `url(\'https://source.unsplash.com/600x450/?japan,${nounArr[i]}\') no-repeat center center/cover`;
+  tileTextHeader[i].textContent = 'Picture';
+  tileTextBody[i].textContent = 'More projects are on the way! For now, please enjoy this random picture from unsplash. Feel free to reload the page to get a new one.'
+};

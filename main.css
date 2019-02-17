@@ -393,68 +393,137 @@ header {
 
 
 #projects {
-  padding: 1rem 0 10rem 0;
-  min-height: 100vh;
+  padding: 1rem 0 20vh 0;
+  height: 120vh;
   display: flex;
-  justify-content: space-around;
+
   background: linear-gradient(to bottom right, var(--clr-accent), var(--clr-accent2));
   border-bottom-left-radius: 50% 15%;
   border-bottom-right-radius: 50% 15%;
-
 }
 
-.card {
-  padding: 2rem 1rem;
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1rem;
+  
+  flex: 1;
+}
+
+.tile-container {
+  margin: 0 1rem;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.tile-container:first-of-type {
+  margin-top: 1rem;
+}
+
+.tile-container:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.flex-tile {
+  display: flex;
+  flex: 1 0;
+  overflow: hidden;
+  
+  border-radius: 5rem;
+  background: pink;
+  transition: all 1000ms;
+}
+
+.flex-tile:not(:last-child) {
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 800px){
+  .flex-tile:nth-of-type(3n){
+    display: none;
+  }
+}
+
+.flex-tile:hover {
+  flex: 3;
+}
+
+.flex-tile > .img {
+  flex: 2;
+  
+}
+
+.flex-tile .text {
+  position: relative;
+  flex: 0;
+  transition: all 1s;
+  transform-origin: center;
+}
+
+.flex-tile:hover .text {
+  flex: 1;
+}
+
+.text-wrapper {
+  position: absolute;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-
-  border-radius: 5rem;
-
-  flex-basis: 27%;
+  justify-content: space-around;
+  opacity: 0;
 }
 
-.card-btn,
-.card-link {
-  padding: 1rem;
-  width: 35%;
+.text--header {
+  text-align: center;
+  flex: 1;
+}
+
+.text--body {
+  flex: 4;
+}
+
+.flex-tile:hover .text-wrapper {
+  animation: slideInRight 1s ease .6s forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+}
+
+.text--btn__github,
+.text--btn__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
   text-align: center;
 
   border-radius: 5rem;
-  background: var(--clr-offwhite);
-  color: var(--clr-primary-dark2);
+  background: var(--clr-primary-dark2);
+  color: var(--clr-offwhite);
   
   transition: all 300ms;
 }
 
-.card-btn:hover,
-.card-link:hover {
-  transform: translateY(-1rem);
-  box-shadow: 0 .7rem 1rem rgba(0,0,0,.5);
+.text--btn__link {
+  margin-bottom: 1rem;
 }
 
-.card-btn:active,
-.card-link:active {
+.text--btn__github:hover,
+.text--btn__link:hover {
+  color: var(--clr-primary-dark2);
   background: var(--clr-offwhite);
-  transform: translateY(-.4rem);
-  box-shadow: 0 .3rem .6rem rgba(0,0,0,.5);
-}
-
-.card:nth-of-type(odd){
-  background: var(--clr-primary);
-  /* background: linear-gradient(to bottom, var(--clr-primary) 80%, transparent); */
-}
-
-.card:nth-of-type(even){
-  background: var(--clr-primary-light2);
-}
-
-.card:nth-of-type(1) .card-img {
-  height: 20rem;
-  width: 80%;
-  border-radius: 2rem;
-  background: url('./assets/001-pig-game-gif.gif') no-repeat center center/cover;
 }
 
 #contact {
