@@ -42,6 +42,8 @@ body {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 /* utility classes */
@@ -240,7 +242,7 @@ header {
 .hero--text__main {
   letter-spacing: .4rem;
   font-family: 'Staatliches', cursive;
-  font-size:10rem;
+  font-size: 10rem;
   font-weight: 400;
   text-shadow: -.3rem .3rem 0 var(--clr-primary-dark2);
 
@@ -347,7 +349,7 @@ header {
 }
 
 .skills-grid {
-  width: 90%;
+  width: 95%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(4, 1fr);
@@ -363,7 +365,7 @@ header {
 .skills-grid__item img {
   height: 5rem;
   width: auto;
-  margin-right: 1.5rem;
+  margin-right: 1rem;
   padding: .6rem;
   border-radius: 50%;
 }
@@ -572,7 +574,6 @@ header {
 .contact-form [type="submit"]:hover {
   color: black;
   background: var(--clr-offwhite);
-
 }
 
 .contact-links {
@@ -629,6 +630,9 @@ header {
 
 footer {
   height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   color: var(--clr-offwhite);
   background: var(--clr-primary-dark2);
