@@ -7,9 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Staatliches" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+  <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="mobile.css">
 </head>
 <body>
-<div class="page-container">
+<div id="page-container">
   <header>
     <nav class="navbar">
       <div class="navbar--logo">
@@ -55,16 +56,16 @@
       </div>
       <div class="about--col2">
         <h3>Skills</h3>
-        <ul>
-          <li><img src="./assets/html-icon.png" alt="html icon">HTML</li>
-          <li><img src="./assets/css-icon.png" alt="css icon"></span>CSS</li>
-          <li><img src="./assets/javascript-icon-32.png" alt="javascript icon">Javascript</li>
-          <li><img src="./assets/sass-icon-32.png" alt="sass icon">Sass</li>
-          <li><img src="./assets/git-icon-32.png" alt="git icon">git</li>
-          <li><img src="./assets/nodejs-icon-32.png" alt="nodeJS icon">nodeJS</li>
-          <li><img src="./assets/file-gray-32.png" alt="generic file icon">cPanel</li>
-          <li><img src="./assets/drupal-icon-black-32.png" alt="drupal icon">Drupal</li>
-        </ul>
+        <div class="skills-grid">
+          <div class="skills-grid__item"><img src="./assets/html-icon.png" alt="html icon">HTML</div>
+          <div class="skills-grid__item"><img src="./assets/css-icon.png" alt="css icon"></span>CSS</div>
+          <div class="skills-grid__item"><img src="./assets/javascript-icon-32.png" alt="javascript icon">Javascript</div>
+          <div class="skills-grid__item"><img src="./assets/sass-icon-32.png" alt="sass icon">Sass</div>
+          <div class="skills-grid__item"><img src="./assets/git-icon-32.png" alt="git icon">git</div>
+          <div class="skills-grid__item"><img src="./assets/nodejs-icon-32.png" alt="nodeJS icon">nodeJS</div>
+          <div class="skills-grid__item"><img src="./assets/file-gray-32.png" alt="generic file icon">cPanel</div>
+          <div class="skills-grid__item"><img src="./assets/drupal-icon-black-32.png" alt="drupal icon">Drupal</div>
+        </div>
       </div>
     </section>
     <section id="projects">
