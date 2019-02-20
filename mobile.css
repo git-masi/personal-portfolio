@@ -6,10 +6,6 @@ body {
   flex-direction: column;
 }
 
-.circle-wrapper {
-  transform: scale(.8);
-}
-
 #about {
   max-width: 94%;
   grid-template-columns: 1fr;
@@ -107,7 +103,11 @@ body {
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 360px) {
+  .circle-wrapper {
+    display: none; 
+  }
+
   /* .skills-grid {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(8, 1fr);
