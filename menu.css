@@ -1,13 +1,20 @@
 .burger-toggle-wrapper {
-  position: absolute;
+  position: fixed;
   top: .5rem;
   right: .5rem;
   padding: .5rem;
+  z-index: 4;
   display: flex;
   justify-content: center;
   align-items: center;
+
   border-radius: 50%;
   background: var(--clr-primary-dark2);
+  transition: all 200ms;
+}
+
+.burger-toggle-wrapper:hover {
+  background: var(--clr-primary-dark);
 }
 
 .toggler {
@@ -76,4 +83,35 @@
 
 .toggler:checked:hover + .hamburger {
   transform: rotate(135deg);
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75vw;
+  height: 100vh;
+  opacity: 0;
+  transform: translateX(-75vw);
+  transition: all 300ms;
+}
+
+.display {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.navbar {
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+
+.navbar--link-container {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navbar__link {
+  margin-bottom: 1rem;
 }

@@ -55,6 +55,18 @@ navDOM.addEventListener('mouseleave', () => {
   }
 });
 
+//hamburger interaction 
+
+const burgerCheckbox = document.querySelector('.toggler');
+const headerDOM = document.getElementsByTagName('header')[0];
+burgerCheckbox.addEventListener('click', ()=> {
+  if (burgerCheckbox.checked) {
+    headerDOM.classList.add('display');
+  } else {
+    headerDOM.classList.remove('display');
+  }
+});
+
 // project section
 
 const tileIMGs = document.querySelectorAll('.flex-tile > .img');

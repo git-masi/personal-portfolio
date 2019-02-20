@@ -39,6 +39,7 @@ body {
 /* SET MAX-WIDTH */
 
 #page-container {
+  /* position: relative; */
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
@@ -75,7 +76,7 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
-  z-index: 11;
+  z-index: 3;
   height: var(--nav-height);
 }
 
