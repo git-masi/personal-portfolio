@@ -19,6 +19,12 @@ function smoothScroll(target, duration) {
     t--;
     return -c / 2 * (t * (t - 2) - 1) + b;
   }
+  for (let i = 0; i <= headerDOM.classList.length; i++) {
+    if (headerDOM.classList[i] == 'display'){
+      headerDOM.classList.remove('display');
+    };
+  };
+  burgerCheckbox.checked = false;
   requestAnimationFrame(loop);
 }
 

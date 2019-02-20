@@ -19,8 +19,8 @@
 
 .toggler {
   position: absolute;
-  width: var(--nav-height);
-  height: var(--nav-height);
+  width: calc(var(--nav-height) - 1rem);
+  height: calc(var(--nav-height) - 1rem);
   z-index: 3;
   
   cursor: pointer;
@@ -28,8 +28,8 @@
 }
 
 .hamburger {
-  width: var(--nav-height);
-  height: var(--nav-height);
+  width: calc(var(--nav-height) - 1rem);
+  height: calc(var(--nav-height) - 1rem);
   
   display: flex;
   justify-content: center;
@@ -41,7 +41,7 @@
 .hamburger-icon {
   position: relative;
   height: .5vh;
-  width: 80%;
+  width: 70%;
   
   display: flex;
   align-items: center;
@@ -86,14 +86,14 @@
 }
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 75vw;
+  width: 100vw;
   height: 100vh;
   opacity: 0;
-  transform: translateX(-75vw);
-  transition: all 300ms;
+  transform: translateX(-100vw);
+  transition: all 400ms;
 }
 
 .display {
@@ -105,6 +105,8 @@ header {
   height: 100%;
   width: 100%;
   flex-direction: column;
+
+  background: linear-gradient(to right, rgba(0,0,0,.7), var(--clr-offwhite));
 }
 
 .navbar--link-container {
