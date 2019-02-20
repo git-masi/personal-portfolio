@@ -2,7 +2,12 @@
 function smoothScroll(target, duration) {
   const navbarHeight  = parseInt(getComputedStyle(document.getElementsByTagName('nav')[0]).height) - 1;
   target = document.querySelector(target);
-  let targetPosition = target.getBoundingClientRect().top - navbarHeight;
+  let targetPosition;
+  if (document.body.clientWidth > 550) {
+    targetPosition = target.getBoundingClientRect().top - navbarHeight;
+  } else {
+    targetPosition = target.getBoundingClientRect().top;
+  }
   let startPosition = window.pageYOffset || window.scrollY;
   let startTime = null;
   

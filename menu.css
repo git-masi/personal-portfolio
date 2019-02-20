@@ -106,7 +106,7 @@ header {
   width: 100%;
   flex-direction: column;
 
-  background: linear-gradient(to right, rgba(0,0,0,.7), var(--clr-offwhite));
+  background: linear-gradient(to right, var(--clr-offwhite), var(--clr-primary-light));
 }
 
 .navbar--link-container {
