@@ -1,0 +1,12 @@
+.hero {
+  height: 100vh
+}
+
+#projects {
+  height: 80vh;
+  padding: 1rem 0 10vh 0;
+}
+
+#contact {
+  height: 60vh;
+}

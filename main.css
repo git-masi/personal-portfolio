@@ -294,7 +294,7 @@ header {
 #about {
   margin: 2rem auto;
   max-width: 80%;
-  min-height: 70vh;
+  height: fit-content;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
@@ -387,7 +387,7 @@ header {
 /* projects */
 
 #projects {
-  padding: 1rem 0 20vh 0;
+  padding: 1rem 0 15vh 0;
   height: 120vh;
   display: flex;
 
