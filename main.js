@@ -90,3 +90,10 @@ for (let i = 0; i < tileIMGs.length; i++){
   tileTextHeader[i].textContent = 'Picture';
   tileTextBody[i].textContent = 'More projects are on the way! For now, please enjoy this random picture from unsplash. Feel free to reload the page to get a new one.'
 };
+
+// set contact-link height
+
+// let siblingHeight = document.querySelector('#contact .contact-form').clientHeight.toString();
+// if (window.matchMedia("(orientation: landscape)").matches && document.body.clientHeight < 550) {
+//   document.querySelector('#contact .contact-links').style.height = siblingHeight+'px';
+// }
