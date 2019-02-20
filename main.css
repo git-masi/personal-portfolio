@@ -379,6 +379,8 @@ header {
   background-color: var(--clr-primary-light2);
 }
 
+/* projects */
+
 #projects {
   padding: 1rem 0 20vh 0;
   height: 120vh;
@@ -396,6 +398,11 @@ header {
   grid-gap: 1rem;
   
   flex: 1;
+}
+
+.tile7 {
+  display: none;
+  margin-right: 1rem;
 }
 
 .tile-container {
