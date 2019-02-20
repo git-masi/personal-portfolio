@@ -107,6 +107,10 @@ body {
 
 @media screen and (max-width: 550px) {
 
+  .navbar--logo {
+    display: none;
+  }
+
   .circle-wrapper {
     display: none; 
   }

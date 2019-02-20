@@ -79,6 +79,10 @@ header {
   height: var(--nav-height);
 }
 
+.burger-toggle-wrapper {
+  display: none;
+}
+
 .navbar {
   height: var(--nav-height);
   padding: 0 calc(var(--nav-height) / 3);
