@@ -38,7 +38,7 @@ contactBtn.addEventListener('click', () => smoothScroll('#contact', smoothTime))
 // navbar fade effect
 const navDOM = document.getElementsByClassName('navbar')[0];
 window.addEventListener('scroll',() => {
-  if(window.scrollY > 150){
+  if(window.scrollY > 150 && document.body.clientWidth > 550){
     navDOM.style.opacity = .6;
   } else {
     navDOM.style.opacity = 1;
@@ -50,7 +50,7 @@ navDOM.addEventListener('mouseenter', () => {
 });
 
 navDOM.addEventListener('mouseleave', () => {
-  if(window.scrollY > 160){
+  if(window.scrollY > 160 && document.body.clientWidth > 550){
     navDOM.style.opacity = .6;
   }
 });
