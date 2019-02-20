@@ -427,11 +427,11 @@ header {
   margin-right: 1rem;
 }
 
-@media screen and (max-width: 800px){
+/* @media screen and (max-width: 800px){
   .flex-tile:nth-of-type(3n){
     display: none;
   }
-}
+} */
 
 .flex-tile:hover {
   flex: 3;
@@ -439,7 +439,6 @@ header {
 
 .flex-tile > .img {
   flex: 2;
-  
 }
 
 .flex-tile .text {
