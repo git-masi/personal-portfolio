@@ -1,0 +1,69 @@
+@import url("menu.css");
+
+.navbar--logo {
+  display: none;
+}
+
+.circle-wrapper {
+  display: none; 
+}
+
+.hero h1 {
+  font-size: 7rem;
+}
+
+.scroll-arrow {
+  display: none;
+}
+
+#projects {
+  height: 200vh;
+}
+
+
+.grid-container {
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.flex-tile {
+  flex-direction: row;
+  border-radius: 2rem;
+}
+
+.tile7 {
+  display: flex;
+}
+
+.flex-tile:nth-of-type(2n){
+  display: none;
+}
+
+.flex-tile:nth-of-type(3n){
+  display: none;
+}
+
+.text--body {
+  flex: 3;
+}
+
+#contact {
+  /* flex-direction: column; */
+  height: fit-content;
+}
+
+.contact-links {
+  height: 100%;
+  flex: 1;
+}
+
+.contact-links ul {
+  align-items: center;
+}
+
+.contact-links ul li {
+  transform: scale(.8);
+}
+
+.contact-links ul li::after {
+  display: none;
+}

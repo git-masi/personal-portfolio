@@ -3,7 +3,7 @@ function smoothScroll(target, duration) {
   const navbarHeight  = parseInt(getComputedStyle(document.getElementsByTagName('nav')[0]).height) - 1;
   target = document.querySelector(target);
   let targetPosition;
-  if (document.body.clientWidth > 550) {
+  if (document.body.clientWidth > 550 && document.body.clientHeight > 550) {
     targetPosition = target.getBoundingClientRect().top - navbarHeight;
   } else {
     targetPosition = target.getBoundingClientRect().top;
@@ -49,7 +49,7 @@ contactBtn.addEventListener('click', () => smoothScroll('#contact', smoothTime))
 // navbar fade effect
 const navDOM = document.getElementsByClassName('navbar')[0];
 window.addEventListener('scroll',() => {
-  if(window.scrollY > 150 && document.body.clientWidth > 550){
+  if(window.scrollY > 150 && document.body.clientWidth > 550 && document.body.clientHeight > 550){
     navDOM.style.opacity = .6;
   } else {
     navDOM.style.opacity = 1;
@@ -61,7 +61,7 @@ navDOM.addEventListener('mouseenter', () => {
 });
 
 navDOM.addEventListener('mouseleave', () => {
-  if(window.scrollY > 160 && document.body.clientWidth > 550){
+  if(window.scrollY > 160 && document.body.clientWidth > 550 && document.body.clientHeight > 550){
     navDOM.style.opacity = .6;
   }
 });
