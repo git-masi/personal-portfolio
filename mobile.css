@@ -66,6 +66,10 @@ body {
   transform: scale(1);
 }
 
+.contact-links ul li::after {
+  display: none;
+}
+
 @media screen and (max-width: 550px) {
 
   .hero {
@@ -100,10 +104,6 @@ body {
 
   .contact-links ul li img {
     margin: 0 auto;
-  }
-
-  .contact-links ul li::after {
-    display: none;
   }
 }
 

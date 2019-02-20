@@ -357,6 +357,7 @@ header {
 }
 
 .skills-grid__item {
+  padding-left: 1rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -613,6 +614,9 @@ header {
   content: "";
   height: 100%;
   width: 68%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   border-radius: 0 5rem 5rem 0;
   background: linear-gradient(to right, transparent, var(--clr-primary) 30%);
@@ -621,6 +625,26 @@ header {
   transform: scaleX(0);
   transform-origin: left;
   transition: all 400ms;
+}
+
+.contact-links ul li:nth-of-type(1)::after {
+  content: "GitHub";
+}
+
+.contact-links ul li:nth-of-type(2)::after {
+  content: "LinkedIn";
+}
+
+.contact-links ul li:nth-of-type(3)::after {
+  content: "Codewars";
+}
+
+.contact-links ul li:nth-of-type(4)::after {
+  content: "email";
+}
+
+.contact-links ul li:nth-of-type(5)::after {
+  content: "resume";
 }
 
 .contact-links ul li:hover::after {
