@@ -91,6 +91,23 @@ for (let i = 0; i < tileIMGs.length; i++){
   tileTextBody[i].textContent = 'More projects are on the way! For now, please enjoy this random picture from unsplash. Feel free to reload the page to get a new one.'
 };
 
+const myProjects = [
+  {
+    'img': './assets/my-project-pictures/the-pig-game.PNG',
+    'title': 'The Pig Game',
+    'description': 'A one-on-one game of luck. Rack up your score until you reach 100. But don\'t roll a 1!',
+    'url': 'https://git-masi.github.io/pig-game/',
+    'GitHub': 'https://github.com/git-masi/pig-game'
+  },
+  {
+    'img': './assets/my-project-pictures/palindrome-fun.PNG',
+    'title': 'Palindrome Fun',
+    'description': 'Do you like palindromes? This short yet engaging app answers the question: "just how many palindromes are there?"',
+    'url': 'https://git-masi.github.io/palindrome-fun/',
+    'GitHub': 'https://github.com/git-masi/palindrome-fun'
+  }
+]
+
 
 
 // set contact-link height
