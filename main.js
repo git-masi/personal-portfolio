@@ -84,6 +84,8 @@ const tileIMGs = document.querySelectorAll('.flex-tile > .img');
 const nounArr = ['flower', 'temple', 'food', 'water', 'matsuri', 'mountain'];
 const tileTextHeader = document.querySelectorAll('.text--header');
 const tileTextBody = document.querySelectorAll('.text--body');
+const urlBtn = document.querySelectorAll('.text--btn__link');
+const gitHubBtn = document.querySelectorAll('.text--btn__github');
 
 for (let i = 0; i < tileIMGs.length; i++){
   document.querySelectorAll('.flex-tile > .img')[i].style.background = `url(\'https://source.unsplash.com/600x450/?japan,${nounArr[i]}\') no-repeat center center/cover`;
@@ -108,7 +110,13 @@ const myProjects = [
   }
 ]
 
-
+for (let i = 0; i < myProjects.length; i++){
+  document.querySelectorAll('.flex-tile > .img')[i].style.background = `url(${myProjects[i].img}) no-repeat center center/cover`;
+  tileTextHeader[i].textContent = myProjects[i].title;
+  tileTextBody[i].textContent = myProjects[i].description;
+  urlBtn[i].setAttribute('href', myProjects[i].url);
+  gitHubBtn[i].setAttribute('href', myProjects[i].GitHub);
+};
 
 // set contact-link height
 
