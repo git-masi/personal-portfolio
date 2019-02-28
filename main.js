@@ -107,6 +107,13 @@ const myProjects = [
     'description': 'Do you like palindromes? This short yet engaging app answers the question: "just how many palindromes are there?"',
     'url': 'https://git-masi.github.io/palindrome-fun/',
     'GitHub': 'https://github.com/git-masi/palindrome-fun'
+  },
+  {
+    'img': './assets/my-project-pictures/patatap-clone.png',
+    'title': 'Patatap Clone',
+    'description': 'Simple clone of patatap.com using paper.js and howler.js. Uniquely blends ideas from both Colt Steele and Wes Bos.',
+    'url': 'https://gitmasi.com/patatap-clone/index.html',
+    'GitHub': 'https://github.com/git-masi/patatap-clone'
   }
 ]
 
@@ -117,10 +124,3 @@ for (let i = 0; i < myProjects.length; i++){
   urlBtn[i].setAttribute('href', myProjects[i].url);
   gitHubBtn[i].setAttribute('href', myProjects[i].GitHub);
 };
-
-// set contact-link height
-
-// let siblingHeight = document.querySelector('#contact .contact-form').clientHeight.toString();
-// if (window.matchMedia("(orientation: landscape)").matches && document.body.clientHeight < 550) {
-//   document.querySelector('#contact .contact-links').style.height = siblingHeight+'px';
-// }
