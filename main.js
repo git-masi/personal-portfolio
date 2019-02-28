@@ -86,6 +86,9 @@ const tileTextHeader = document.querySelectorAll('.text--header');
 const tileTextBody = document.querySelectorAll('.text--body');
 const urlBtn = document.querySelectorAll('.text--btn__link');
 const gitHubBtn = document.querySelectorAll('.text--btn__github');
+const tile3 = document.querySelector('.tile3');
+const tile4 = document.querySelector('.tile4');
+const tile7 = document.querySelector('.tile7');
 
 for (let i = 0; i < tileIMGs.length; i++){
   document.querySelectorAll('.flex-tile > .img')[i].style.background = `url(\'https://source.unsplash.com/600x450/?japan,${nounArr[i]}\') no-repeat center center/cover`;
@@ -124,3 +127,17 @@ for (let i = 0; i < myProjects.length; i++){
   urlBtn[i].setAttribute('href', myProjects[i].url);
   gitHubBtn[i].setAttribute('href', myProjects[i].GitHub);
 };
+
+tile7.children[0].style.background = `url(${myProjects[1].img}) no-repeat center center/cover`;
+tile7.children[1].children[0].children[0].textContent = myProjects[1].title;
+tile7.children[1].children[0].children[1].textContent = myProjects[1].description;
+tile7.children[1].children[0].children[2].setAttribute('href', myProjects[1].url);
+tile7.children[1].children[0].children[3].setAttribute('href', myProjects[1].GitHub);
+
+if(tile3.getBoundingClientRect().right == 0){
+  tile4.children[0].style.background = `url(${myProjects[2].img}) no-repeat center center/cover`;
+  tile4.children[1].children[0].children[0].textContent = myProjects[2].title;
+  tile4.children[1].children[0].children[1].textContent = myProjects[2].description;
+  tile4.children[1].children[0].children[2].setAttribute('href', myProjects[2].url);
+  tile4.children[1].children[0].children[3].setAttribute('href', myProjects[2].GitHub);
+}
