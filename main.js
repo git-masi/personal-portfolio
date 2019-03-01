@@ -134,6 +134,7 @@ tile7.children[1].children[0].children[1].textContent = myProjects[1].descriptio
 tile7.children[1].children[0].children[2].setAttribute('href', myProjects[1].url);
 tile7.children[1].children[0].children[3].setAttribute('href', myProjects[1].GitHub);
 
+// this does not fire on resize, only when the page first loads (or is refreshed)
 if(tile3.getBoundingClientRect().right == 0){
   tile4.children[0].style.background = `url(${myProjects[2].img}) no-repeat center center/cover`;
   tile4.children[1].children[0].children[0].textContent = myProjects[2].title;
