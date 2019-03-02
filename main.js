@@ -87,7 +87,7 @@ const tileTextBody = document.querySelectorAll('.text--body');
 const urlBtn = document.querySelectorAll('.text--btn__link');
 const gitHubBtn = document.querySelectorAll('.text--btn__github');
 const tile3 = document.querySelector('.tile3');
-const tile4 = document.querySelector('.tile4');
+const tile5 = document.querySelector('.tile5');
 const tile7 = document.querySelector('.tile7');
 
 for (let i = 0; i < tileIMGs.length; i++){
@@ -119,7 +119,7 @@ const myProjects = [
     'GitHub': 'https://github.com/git-masi/patatap-clone'
   },
   {
-    'img': './assets/my-project-pictures/patatap-clone.png',
+    'img': './assets/my-project-pictures/task-list.PNG',
     'title': 'Local Storage Todo',
     'description': 'A todo list with data persistence via local storage. Inspired by Brad Traversy but with some notable changes to the JS code.',
     'url': 'https://git-masi.github.io/task-list/',
@@ -133,6 +133,9 @@ for (let i = 0; i < myProjects.length; i++){
   tileTextBody[i].textContent = myProjects[i].description;
   urlBtn[i].setAttribute('href', myProjects[i].url);
   gitHubBtn[i].setAttribute('href', myProjects[i].GitHub);
+
+  // set background position for 4th project img to better display contents
+  if(i === 3) {document.querySelectorAll('.flex-tile > .img')[i].style.backgroundPosition = 'left center'};
 };
 
 tile7.children[0].style.background = `url(${myProjects[1].img}) no-repeat center center/cover`;
@@ -143,9 +146,9 @@ tile7.children[1].children[0].children[3].setAttribute('href', myProjects[1].Git
 
 // this does not fire on resize, only when the page first loads (or is refreshed)
 if(tile3.getBoundingClientRect().right == 0){
-  tile4.children[0].style.background = `url(${myProjects[2].img}) no-repeat center center/cover`;
-  tile4.children[1].children[0].children[0].textContent = myProjects[2].title;
-  tile4.children[1].children[0].children[1].textContent = myProjects[2].description;
-  tile4.children[1].children[0].children[2].setAttribute('href', myProjects[2].url);
-  tile4.children[1].children[0].children[3].setAttribute('href', myProjects[2].GitHub);
+  tile5.children[0].style.background = `url(${myProjects[2].img}) no-repeat center center/cover`;
+  tile5.children[1].children[0].children[0].textContent = myProjects[2].title;
+  tile5.children[1].children[0].children[1].textContent = myProjects[2].description;
+  tile5.children[1].children[0].children[2].setAttribute('href', myProjects[2].url);
+  tile5.children[1].children[0].children[3].setAttribute('href', myProjects[2].GitHub);
 }
