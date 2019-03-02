@@ -117,6 +117,13 @@ const myProjects = [
     'description': 'Simple clone of patatap.com using paper.js and howler.js. Uniquely blends ideas from both Colt Steele and Wes Bos.',
     'url': 'https://gitmasi.com/patatap-clone/index.html',
     'GitHub': 'https://github.com/git-masi/patatap-clone'
+  },
+  {
+    'img': './assets/my-project-pictures/patatap-clone.png',
+    'title': 'Local Storage Todo',
+    'description': 'A todo list with data persistence via local storage. Inspired by Brad Traversy but with some notable changes to the JS code.',
+    'url': 'https://git-masi.github.io/task-list/',
+    'GitHub': 'https://github.com/git-masi/task-list'
   }
 ]
 
