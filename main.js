@@ -124,6 +124,13 @@ const myProjects = [
     'description': 'A todo list with data persistence via local storage. Inspired by Brad Traversy but with some notable changes to the JS code.',
     'url': 'https://git-masi.github.io/task-list/',
     'GitHub': 'https://github.com/git-masi/task-list'
+  },
+  {
+    'img': './assets/my-project-pictures/loan-calculator.PNG',
+    'title': 'Loan Calculator',
+    'description': 'Calculate monthly payments, total amount paid, and total interest paid on an amortized loan.',
+    'url': 'https://git-masi.github.io/loan-calculator/',
+    'GitHub': 'https://github.com/git-masi/loan-calculator'
   }
 ]
 
