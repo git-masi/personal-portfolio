@@ -126,7 +126,7 @@ const myProjects = [
     'GitHub': 'https://github.com/git-masi/task-list'
   },
   {
-    'img': './assets/my-project-pictures/loan-calculator.PNG',
+    'img': './assets/my-project-pictures/loan-calculator.png',
     'title': 'Loan Calculator',
     'description': 'Calculate monthly payments, total amount paid, and total interest paid on an amortized loan.',
     'url': 'https://git-masi.github.io/loan-calculator/',
