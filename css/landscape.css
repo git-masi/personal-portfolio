@@ -21,25 +21,24 @@
 }
 
 .grid-container {
-  grid-template-rows: repeat(3, 1fr);
-  margin-bottom: 4vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.tile-container {
+  flex-direction: column;
+}
+
+.tile-container:last-of-type {
+  display: none;
 }
 
 .flex-tile {
   flex-direction: row;
-  border-radius: 2rem;
 }
 
-.tile7 {
-  display: flex;
-}
-
-.flex-tile:nth-of-type(2n){
-  display: none;
-}
-
-.flex-tile:nth-of-type(3n){
-  display: none;
+.flex-tile:not(:last-of-type) {
+  margin-bottom: 1rem;
 }
 
 .text--body {
