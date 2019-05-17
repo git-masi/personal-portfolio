@@ -80,23 +80,33 @@ burgerCheckbox.addEventListener('click', ()=> {
 
 // project section
 
-const tileIMGs = document.querySelectorAll('.flex-tile > .img');
-const nounArr = ['flower', 'temple', 'food', 'water', 'matsuri', 'mountain'];
 const tileTextHeader = document.querySelectorAll('.text--header');
 const tileTextBody = document.querySelectorAll('.text--body');
 const urlBtn = document.querySelectorAll('.text--btn__link');
 const gitHubBtn = document.querySelectorAll('.text--btn__github');
-const tile3 = document.querySelector('.tile3');
-const tile5 = document.querySelector('.tile5');
-const tile7 = document.querySelector('.tile7');
-
-for (let i = 0; i < tileIMGs.length; i++){
-  document.querySelectorAll('.flex-tile > .img')[i].style.background = `url(\'https://source.unsplash.com/600x450/?japan,${nounArr[i]}\') no-repeat center center/cover`;
-  tileTextHeader[i].textContent = 'Picture';
-  tileTextBody[i].textContent = 'More projects are on the way! For now, please enjoy this random picture from unsplash. Feel free to reload the page to get a new one.'
-};
 
 const myProjects = [
+  {
+    'img': './assets/my-project-pictures/react-colors.png',
+    'title': 'React Colors - Palette Creator',
+    'description': 'Creat custom color palettes for your next project! Palettes are saved in local storage for future use.',
+    'url': 'https://sharp-yonath-69298a.netlify.com/',
+    'GitHub': 'https://github.com/git-masi/react-color-app'
+  },
+  {
+    'img': './assets/my-project-pictures/react-dad-jokes.png',
+    'title': 'React Dad Jokes',
+    'description': 'Get dad jokes from the wonderful icanhazdadjoke.com! Vote on jokes you like and the list will sort itself.',
+    'url': 'https://git-masi.github.io/react-dad-jokes/',
+    'GitHub': 'https://github.com/git-masi/react-dad-jokes'
+  },
+  {
+    'img': './assets/my-project-pictures/hero-of-time.PNG',
+    'title': 'Timeboxing - Hero of Time',
+    'description': 'Want to be more focused and productive? Then let this app help you with timeboxing!',
+    'url': 'https://git-masi.github.io/timebox-hero-of-time/',
+    'GitHub': 'https://github.com/git-masi/timebox-hero-of-time'
+  },
   {
     'img': './assets/my-project-pictures/the-pig-game.PNG',
     'title': 'The Pig Game',
@@ -114,48 +124,16 @@ const myProjects = [
   {
     'img': './assets/my-project-pictures/patatap-clone.png',
     'title': 'Patatap Clone',
-    'description': 'Simple clone of patatap.com using paper.js and howler.js. Uniquely blends ideas from both Colt Steele and Wes Bos.',
+    'description': 'Simple clone of patatap.com using paper.js and howler.js.',
     'url': 'https://gitmasi.com/patatap-clone/index.html',
     'GitHub': 'https://github.com/git-masi/patatap-clone'
   },
-  {
-    'img': './assets/my-project-pictures/task-list.PNG',
-    'title': 'Local Storage Todo',
-    'description': 'A todo list with data persistence via local storage. Inspired by Brad Traversy but with some notable changes to the JS code.',
-    'url': 'https://git-masi.github.io/task-list/',
-    'GitHub': 'https://github.com/git-masi/task-list'
-  },
-  {
-    'img': './assets/my-project-pictures/loan-calculator.png',
-    'title': 'Loan Calculator',
-    'description': 'Calculate monthly payments, total amount paid, and total interest paid on an amortized loan.',
-    'url': 'https://git-masi.github.io/loan-calculator/',
-    'GitHub': 'https://github.com/git-masi/loan-calculator'
-  }
 ]
 
 for (let i = 0; i < myProjects.length; i++){
-  document.querySelectorAll('.flex-tile > .img')[i].style.background = `url(${myProjects[i].img}) no-repeat center center/cover`;
+  document.querySelectorAll('.flex-tile > .img')[i].style.background = `url(${myProjects[i].img}) no-repeat top center/cover`;
   tileTextHeader[i].textContent = myProjects[i].title;
   tileTextBody[i].textContent = myProjects[i].description;
   urlBtn[i].setAttribute('href', myProjects[i].url);
   gitHubBtn[i].setAttribute('href', myProjects[i].GitHub);
-
-  // set background position for 4th project img to better display contents
-  if(i === 3) {document.querySelectorAll('.flex-tile > .img')[i].style.backgroundPosition = 'left center'};
-};
-
-tile7.children[0].style.background = `url(${myProjects[1].img}) no-repeat center center/cover`;
-tile7.children[1].children[0].children[0].textContent = myProjects[1].title;
-tile7.children[1].children[0].children[1].textContent = myProjects[1].description;
-tile7.children[1].children[0].children[2].setAttribute('href', myProjects[1].url);
-tile7.children[1].children[0].children[3].setAttribute('href', myProjects[1].GitHub);
-
-// this does not fire on resize, only when the page first loads (or is refreshed)
-if(tile3.getBoundingClientRect().right == 0){
-  tile5.children[0].style.background = `url(${myProjects[2].img}) no-repeat center center/cover`;
-  tile5.children[1].children[0].children[0].textContent = myProjects[2].title;
-  tile5.children[1].children[0].children[1].textContent = myProjects[2].description;
-  tile5.children[1].children[0].children[2].setAttribute('href', myProjects[2].url);
-  tile5.children[1].children[0].children[3].setAttribute('href', myProjects[2].GitHub);
 }

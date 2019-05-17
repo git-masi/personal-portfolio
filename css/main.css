@@ -397,6 +397,7 @@ header {
 }
 
 .grid-container {
+  margin: 0 1rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, 1fr);
@@ -405,24 +406,10 @@ header {
   flex: 1;
 }
 
-.tile7 {
-  display: none;
-  margin-right: 1rem;
-}
-
 .tile-container {
-  margin: 0 1rem;
   display: flex;
   justify-content: center;
   flex: 1;
-}
-
-.tile-container:first-of-type {
-  margin-top: 1rem;
-}
-
-.tile-container:last-of-type {
-  margin-bottom: 1rem;
 }
 
 .flex-tile {
@@ -430,7 +417,7 @@ header {
   flex: 1 0;
   overflow: hidden;
   
-  border-radius: 5rem;
+  border-radius: 2rem;
   background: pink;
   transition: all 1000ms;
 }
@@ -665,6 +652,10 @@ footer {
   text-align: center;
   color: var(--clr-offwhite);
   background: var(--clr-primary-dark2);
+}
+
+footer > *:not(:last-child) {
+  margin-right: 1rem;
 }
 
 @keyframes rotateInDownLeft {
