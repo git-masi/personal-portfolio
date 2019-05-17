@@ -87,14 +87,14 @@ const gitHubBtn = document.querySelectorAll('.text--btn__github');
 
 const myProjects = [
   {
-    'img': './assets/my-project-pictures/react-colors.png',
+    'img': './assets/my-project-pictures/react-colors.PNG',
     'title': 'React Colors - Palette Creator',
     'description': 'Creat custom color palettes for your next project! Palettes are saved in local storage for future use.',
     'url': 'https://sharp-yonath-69298a.netlify.com/',
     'GitHub': 'https://github.com/git-masi/react-color-app'
   },
   {
-    'img': './assets/my-project-pictures/react-dad-jokes.png',
+    'img': './assets/my-project-pictures/react-dad-jokes.PNG',
     'title': 'React Dad Jokes',
     'description': 'Get dad jokes from the wonderful icanhazdadjoke.com! Vote on jokes you like and the list will sort itself.',
     'url': 'https://git-masi.github.io/react-dad-jokes/',
