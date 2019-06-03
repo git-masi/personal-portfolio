@@ -90,7 +90,7 @@ const myProjects = [
     'img': './assets/my-project-pictures/bitcoin-data-visualizer.PNG',
     'title': 'Bitcoin Data Visualizer',
     'description': 'See historical bitcoin price data graphically displayed and use investment tools to calculate return on investment.',
-    'url': 'https://git-masi.github.io/bitcoin-data-visualizer/#/invest',
+    'url': 'https://git-masi.github.io/bitcoin-data-visualizer/#/',
     'GitHub': 'https://github.com/git-masi/bitcoin-data-visualizer'
   },
   {
