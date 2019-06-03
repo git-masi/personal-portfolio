@@ -87,6 +87,13 @@ const gitHubBtn = document.querySelectorAll('.text--btn__github');
 
 const myProjects = [
   {
+    'img': './assets/my-project-pictures/bitcoin-data-visualizer.PNG',
+    'title': 'Bitcoin Data Visualizer',
+    'description': 'See historical bitcoin price data graphically displayed and use investment tools to calculate return on investment.',
+    'url': 'https://git-masi.github.io/bitcoin-data-visualizer/#/invest',
+    'GitHub': 'https://github.com/git-masi/bitcoin-data-visualizer'
+  },
+  {
     'img': './assets/my-project-pictures/react-colors.PNG',
     'title': 'React Colors - Palette Creator',
     'description': 'Creat custom color palettes for your next project! Palettes are saved in local storage for future use.',
@@ -120,13 +127,6 @@ const myProjects = [
     'description': 'Do you like palindromes? This short yet engaging app answers the question: "just how many palindromes are there?"',
     'url': 'https://git-masi.github.io/palindrome-fun/',
     'GitHub': 'https://github.com/git-masi/palindrome-fun'
-  },
-  {
-    'img': './assets/my-project-pictures/patatap-clone.png',
-    'title': 'Patatap Clone',
-    'description': 'Simple clone of patatap.com using paper.js and howler.js.',
-    'url': 'https://gitmasi.com/patatap-clone/index.html',
-    'GitHub': 'https://github.com/git-masi/patatap-clone'
   },
 ]
 
