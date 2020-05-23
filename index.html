@@ -1,217 +1,150 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>gitMasi</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Staatliches" rel="stylesheet">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>gitMasi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700|Staatliches"
+      rel="stylesheet"
+    />
 
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-</head>
-<body>
-<div id="page-container">
-  <div class="burger-toggle-wrapper">
-    <input type="checkbox" name="toggler" class="toggler">
-    <div class="hamburger">
-        <div class="hamburger-icon"></div>
-    </div>
-  </div>
-  <header>
-    <nav class="navbar">
-      <div class="navbar--logo">
-        <span class="logo__icon"><span class="accent">git</span>Masi</span>
-      </div>
-      <div class="navbar--link-container">
-        <a class="navbar__link" href="#home">home</a>
-        <a class="navbar__link" href="#about">about</a>
-        <a class="navbar__link" href="#projects">projects</a>
-        <a class="navbar__link" href="#contact">contact</a>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <section class="hero" id="home">
-      <div class="hero--image-text-wrapper">
-        <div class="circle-wrapper">
-          <div class="hero--image"></div>
-          <div class="circle2"></div>
-          <div class="circle3"></div>
-        </div>
-        <div class="hero--text">
-          <h1 class="hero--text__main">Eric Masi</h1>
-          <p class="hero--text__sub">Front end developer, cyclist, pizza enthusiast</p>
-        </div>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <img
+      class="bg-img"
+      sizes="100vw"
+      srcset="
+        ./assets/bg/blue-polygon-bg-1280x720.png  1280w,
+        ./assets/bg/blue-polygon-bg-1920x1080.png 1920w,
+        ./assets/bg/blue-polygon-bg-3840x2160.png 3840w
+      "
+      alt=""
+    />
+
+    <header class="hero">
+      <div class="hero__content">
+        <h1 class="hero__heading">Eric Masi</h1>
+        <h3 class="hero__subheading">
+          Developer, cyclist, pizza enthusiast
+        </h3>
       </div>
       <div class="scroll-arrow">
-        <h4>scroll <span>&rarr;</span></h4>
+        <h4>scroll &rarr;</h4>
       </div>
-    </section>
-    <section id="about">
-      <div class="about--col1">
-        <h3>About</h3>
-        <p>
-          I started coding in 2018 in pursuit of an intellectual challenge and an outlet for my creativity. I've been obsessed ever since.          <br>
-          <br>
-          I enjoy making highly interactive and engaging web applications and I am constantly learning and growing. Much of my focus is on core web technologies: HTML5, CSS3, and Javascript. But recently I have fallen in love with React 😄!
-          <br>
-          <br>
-          When I don't have my face pressed up against my monitor I enjoy cycling and eating copious amounts of pizza afterwards.
-        </p>
-      </div>
-      <div class="about--col2">
-        <h3>Skills</h3>
-        <div class="skills-grid">
-          <div class="skills-grid__item"><img src="./assets/html-icon.png" alt="html icon">HTML</div>
-          <div class="skills-grid__item"><img src="./assets/css-icon.png" alt="css icon"></span>CSS</div>
-          <div class="skills-grid__item"><img src="./assets/javascript-icon-32.png" alt="javascript icon">Javascript</div>
-          <div class="skills-grid__item"><img src="./assets/sass-icon-32.png" alt="sass icon">Sass</div>
-          <div class="skills-grid__item"><img src="./assets/git-icon-32.png" alt="git icon">git</div>
-          <div class="skills-grid__item"><img src="./assets/react-icon-32.png" alt="nodeJS icon">React</div>
-          <div class="skills-grid__item"><img src="./assets/file-gray-32.png" alt="generic file icon">cPanel</div>
-          <div class="skills-grid__item"><img src="./assets/wordpress-icon-32.png" alt="database icon">WordPress</div>
-        </div>
-      </div>
-    </section>
-    <section id="projects">
-      <div class="grid-container">
-          <div class="tile-container">
-            <div class="flex-tile tile1">
-              <div class="img"></div>
-              <div class="text">
-                <div class="text-wrapper">
-                  <h4 class="text--header"></h4>
-                  <p class="text--body"></p>
-                  <a href="javascript:void(0)" role="button" class="btn text--btn__link" target="_blank"><span>Let's Go!</span></a>
-                  <a href="javascript:void(0)" role="button" class="text--btn__github" target="_blank"><span>To GitHub!</span></a>
-                </div>
-              </div>
-            </div>
-            <div class="flex-tile tile2">
-              <div class="img"></div>
-              <div class="text">
-                <div class="text-wrapper">
-                  <h4 class="text--header"></h4>
-                  <p class="text--body"></p>
-                  <a href="javascript:void(0)" role="button" class="btn text--btn__link" target="_blank"><span>Let's Go!</span></a>
-                  <a href="javascript:void(0)" role="button" class="text--btn__github" target="_blank"><span>To GitHub!</span></a>
-                </div>
-              </div>
-            </div>
-            <div class="flex-tile tile3">
-              <div class="img"></div>
-              <div class="text">
-                <div class="text-wrapper">
-                  <h4 class="text--header"></h4>
-                  <p class="text--body"></p>
-                  <a href="javascript:void(0)" role="button" class="btn text--btn__link" target="_blank"><span>Let's Go!</span></a>
-                  <a href="javascript:void(0)" role="button" class="text--btn__github" target="_blank"><span>To GitHub!</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="tile-container">
-            <div class="flex-tile tile4">
-              <div class="img"></div>
-              <div class="text">
-                <div class="text-wrapper">
-                  <h4 class="text--header"></h4>
-                  <p class="text--body"></p>
-                  <a href="javascript:void(0)" role="button" class="btn text--btn__link" target="_blank"><span>Let's Go!</span></a>
-                  <a href="javascript:void(0)" role="button" class="text--btn__github" target="_blank"><span>To GitHub!</span></a>
-                </div>
-              </div>
-            </div>
-            <div class="flex-tile tile5">
-              <div class="img"></div>
-              <div class="text">
-                <div class="text-wrapper">
-                  <h4 class="text--header"></h4>
-                  <p class="text--body"></p>
-                  <a href="javascript:void(0)" role="button" class="btn text--btn__link" target="_blank"><span>Let's Go!</span></a>
-                  <a href="javascript:void(0)" role="button" class="text--btn__github" target="_blank"><span>To GitHub!</span></a>
-                </div>
-              </div>
-            </div>
-            <div class="flex-tile tile6">
-              <div class="img"></div>
-              <div class="text">
-                <div class="text-wrapper">
-                  <h4 class="text--header"></h4>
-                  <p class="text--body"></p>
-                  <a href="javascript:void(0)" role="button" class="btn text--btn__link" target="_blank"><span>Let's Go!</span></a>
-                  <a href="javascript:void(0)" role="button" class="text--btn__github" target="_blank"><span>To GitHub!</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-         </div>
+    </header>
 
-    </section>
-    <section id="contact">
-      <form action="process.php" method="POST" class="contact-form">
-        <div class="form--item">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your name">
-        </div>
-        <div class="form--item">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Your email">
-        </div>
-        <div class="form--item">
-          <label for="phone">Phone Number</label>
-          <input type="text" id="phone" name="phone" placeholder="Your phone number">
-        </div>
-        <div class="form--item">
-          <label for="message">Message</label>
-          <textarea name="message" id="message" cols="30" rows="10" placeholder="Send a message"></textarea>
-        </div>
-        <button type="submit" class="btn">Submit</button>
-      </form>
-      <div class="contact-links">
-        <ul>
-          <li>
-            <a href="https://github.com/git-masi" target="_blank">
-            <img src="./assets/github-logo-black-64.png" alt="github"></a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/emasi" target="_blank">
-              <img src="./assets/linkedin-icon-black-64.png" alt="linkedin">
-            </a>
-          </li>
-          <li>
-            <a href="https://www.codewars.com/users/zenRyoku" target="_blank">
-              <img src="./assets/binary-code-icon-black-64.png" alt="codewars">
-            </a>
-          </li>
-          <li>
-            <a href="mailto:eric@git-masi.com">
-              <img src="./assets/envelope-icon-black-64.png" alt="email">
-            </a>
-          </li>
-          <li>
-            <a href="./assets/Eric Masi Web Developer Resume.pdf" download="eric-masi-resume">
-              <img src="./assets/resume-icon-black-64.png" alt="resume">
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <div>&copy; 2019 Eric Masi</div>
-    <span>|</span>
-    <div>
-      Icons made by
-      <a href="https://www.freepik.com/" title="Freepik">Freepik</a>
-      from
-      <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-      is licensed by
-      <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
-    </div>
-  </footer>
+    <main>
+      <div class="content-section__wrapper">
+        <h3 class="content-section__heading">About</h3>
+        <section class="content-section">
+          <div class="text">
+            <p>
+              I enjoy creating engaging user experiences web applications and I
+              am constantly learning and growing.
+            </p>
 
-</div>
-  <script src="main.js"></script>
-</body>
+            <p></p>
+
+            <p>
+              When I don't have my face pressed up against my monitor I enjoy
+              cycling and then eating copious amounts of pizza afterwards.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <div class="img-bg"></div>
+
+      <div class="content-section__wrapper">
+        <h3 class="content-section__heading">Skills</h3>
+        <section class="content-section">
+          <div class="skills-grid__item">
+            <img src="./assets/html-icon.png" alt="html icon" />HTML
+          </div>
+          <div class="skills-grid__item">
+            <img src="./assets/css-icon.png" alt="css icon" />CSS
+          </div>
+          <div class="skills-grid__item">
+            <img
+              src="./assets/javascript-icon-32.png"
+              alt="javascript icon"
+            />Javascript
+          </div>
+          <div class="skills-grid__item">
+            <img src="./assets/sass-icon-32.png" alt="sass icon" />Sass
+          </div>
+          <div class="skills-grid__item">
+            <img src="./assets/git-icon-32.png" alt="git icon" />git
+          </div>
+          <div class="skills-grid__item">
+            <img src="./assets/react-icon-32.png" alt="nodeJS icon" />React
+          </div>
+          <div class="skills-grid__item">
+            <img
+              src="./assets/file-gray-32.png"
+              alt="generic file icon"
+            />cPanel
+          </div>
+          <div class="skills-grid__item">
+            <img
+              src="./assets/wordpress-icon-32.png"
+              alt="database icon"
+            />WordPress
+          </div>
+        </section>
+      </div>
+
+      <div class="clear-bg"></div>
+
+      <div class="content-section__wrapper">
+        <h3 class="content-section__heading">Projects</h3>
+        <section class="content-section"></section>
+      </div>
+
+      <div class="img-bg"></div>
+
+      <div class="content-section__wrapper">
+        <h3 class="content-section__heading">Connect</h3>
+        <section class="content-section content-section--last">
+          <div class="connect__img-wrapper">
+            <img
+              class="connect__img-low-poly"
+              src="./assets/portrait/eric-masi-low-poly-2.png"
+              alt="Eric Masi"
+            />
+            <img
+              class="connect__img-clear"
+              src="./assets/portrait/Masi-5952-sm.jpg"
+              alt="Eric Masi"
+            />
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div>&copy; <span class="current-year"></span> Eric Masi</div>
+      <span>|</span>
+      <div>
+        Icons made by
+        <a href="https://www.freepik.com/" title="Freepik">Freepik</a>
+        from
+        <a href="https://www.flaticon.com/" title="Flaticon"
+          >www.flaticon.com</a
+        >
+        is licensed by
+        <a
+          href="http://creativecommons.org/licenses/by/3.0/"
+          title="Creative Commons BY 3.0"
+          target="_blank"
+          >CC 3.0 BY</a
+        >
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
 </html>

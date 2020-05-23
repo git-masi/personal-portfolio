@@ -4,7 +4,7 @@
   "description": "Personal portfolio",
   "main": "main.js",
   "scripts": {
-    "dev": "parcel watch index.html main.js",
+    "dev": "parcel index.html main.js",
     "build": "parcel build index.html"
   },
   "repository": {
