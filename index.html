@@ -13,24 +13,16 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <img
-      class="bg-img"
-      sizes="100vw"
-      srcset="
-        ./assets/bg/blue-polygon-bg-1280x720.png  1280w,
-        ./assets/bg/blue-polygon-bg-1920x1080.png 1920w,
-        ./assets/bg/blue-polygon-bg-3840x2160.png 3840w
-      "
-      alt=""
-    />
-
     <header class="hero">
+      <div class="img-bg img-bg--blue img-bg--hero"></div>
+
       <div class="hero__content">
         <h1 class="hero__heading">Eric Masi</h1>
         <h3 class="hero__subheading">
           Developer, cyclist, pizza enthusiast
         </h3>
       </div>
+
       <div class="scroll-arrow">
         <h4>scroll &rarr;</h4>
       </div>
@@ -56,68 +48,90 @@
         </section>
       </div>
 
-      <div class="img-bg"></div>
+      <div class="img-bg img-bg--pink"></div>
 
       <div class="content-section__wrapper">
         <h3 class="content-section__heading">Skills</h3>
         <section class="content-section">
           <div class="skills-grid__item">
-            <img src="./assets/html-icon.png" alt="html icon" />HTML
-          </div>
-          <div class="skills-grid__item">
-            <img src="./assets/css-icon.png" alt="css icon" />CSS
+            <img
+              class="lazy"
+              data-src="https://gitmasi.com/assets/html-icon.png"
+              alt="html icon"
+            />HTML
           </div>
           <div class="skills-grid__item">
             <img
-              src="./assets/javascript-icon-32.png"
+              class="lazy"
+              data-src="https://gitmasi.com/assets/css-icon.png"
+              alt="css icon"
+            />CSS
+          </div>
+          <div class="skills-grid__item">
+            <img
+              class="lazy"
+              data-src="https://gitmasi.com/assets/javascript-icon-32.png"
               alt="javascript icon"
             />Javascript
           </div>
           <div class="skills-grid__item">
-            <img src="./assets/sass-icon-32.png" alt="sass icon" />Sass
-          </div>
-          <div class="skills-grid__item">
-            <img src="./assets/git-icon-32.png" alt="git icon" />git
-          </div>
-          <div class="skills-grid__item">
-            <img src="./assets/react-icon-32.png" alt="nodeJS icon" />React
+            <img
+              class="lazy"
+              data-src="https://gitmasi.com/assets/sass-icon-32.png"
+              alt="sass icon"
+            />Sass
           </div>
           <div class="skills-grid__item">
             <img
-              src="./assets/file-gray-32.png"
+              class="lazy"
+              data-src="https://gitmasi.com/assets/git-icon-32.png"
+              alt="git icon"
+            />git
+          </div>
+          <div class="skills-grid__item">
+            <img
+              class="lazy"
+              data-src="https://gitmasi.com/assets/react-icon-32.png"
+              alt="nodeJS icon"
+            />React
+          </div>
+          <div class="skills-grid__item">
+            <img
+              class="lazy"
+              data-src="https://gitmasi.com/assets/file-gray-32.png"
               alt="generic file icon"
             />cPanel
           </div>
           <div class="skills-grid__item">
             <img
-              src="./assets/wordpress-icon-32.png"
+              data-src="https://gitmasi.com/assets/wordpress-icon-32.png"
               alt="database icon"
             />WordPress
           </div>
         </section>
       </div>
 
-      <div class="clear-bg"></div>
+      <div class="img-bg img-bg--blue"></div>
 
       <div class="content-section__wrapper">
         <h3 class="content-section__heading">Projects</h3>
         <section class="content-section"></section>
       </div>
 
-      <div class="img-bg"></div>
+      <div class="img-bg img-bg--pink"></div>
 
       <div class="content-section__wrapper">
         <h3 class="content-section__heading">Connect</h3>
         <section class="content-section content-section--last">
           <div class="connect__img-wrapper">
             <img
-              class="connect__img-low-poly"
-              src="./assets/portrait/eric-masi-low-poly-2.png"
+              class="connect__img-low-poly lazy"
+              src="https://gitmasi.com/assets/portrait/eric-masi-low-poly-2.png"
               alt="Eric Masi"
             />
             <img
-              class="connect__img-clear"
-              src="./assets/portrait/Masi-5952-sm.jpg"
+              class="connect__img-clear lazy"
+              src="https://gitmasi.com/assets/portrait/Masi-5952-sm.jpg"
               alt="Eric Masi"
             />
           </div>

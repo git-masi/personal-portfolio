@@ -8,7 +8,6 @@ import './css/main.css';
  */
 const screenHeight = window.screen.height;
 
-const bgImg = document.querySelector('.bg-img');
 const heroSection = document.querySelector('.hero');
 const heroHeading = document.querySelector('.hero__heading');
 const heroSubheading = document.querySelector('.hero__subheading');
@@ -25,19 +24,17 @@ function update() {
   ticking = false;
 
   if (lastScrollY < screenHeight) {
-    bgImg.style.transform = `scale(${1 + 0.0002 * lastScrollY})`;
-
     heroSection.style.background = `linear-gradient(to bottom, transparent, rgba(0, 0, 0, ${
       0 + 0.001 * lastScrollY
     }))`;
     heroHeading.style.opacity = '1';
     heroHeading.style.animation = 'none';
-    heroHeading.style.transform = `translate(-${lastScrollY * 1.5}px, -${
-      lastScrollY * 1.4
+    heroHeading.style.transform = `translate(-${lastScrollY * 1.35}px, -${
+      lastScrollY * 1.28
     }px) rotate(-${lastScrollY / 4}deg)`;
     heroSubheading.style.opacity = '1';
     heroSubheading.style.animation = 'none';
-    heroSubheading.style.transform = `translate(${lastScrollY * 1.5}px, -${
+    heroSubheading.style.transform = `translate(${lastScrollY * 1.3}px, -${
       lastScrollY * 1.1
     }px) rotate(${lastScrollY / 4}deg)`;
   }
@@ -53,6 +50,34 @@ function requestTick() {
     requestAnimationFrame(update);
     ticking = true;
   }
+}
+
+const images = document.querySelectorAll('.lazy');
+
+if (!('IntersectionObserver' in window)) {
+  images.forEach((image) => loadImage(image));
+} else {
+  const lazyImagesOptions = {
+    rootMargin: '50px 0px',
+    threshold: 0.01,
+  };
+
+  let lazyImagesObserver = new IntersectionObserver(
+    (entries, lazyImagesObserver) => {
+      entries.forEach((image) => {
+        if (!image.isIntersecting) return;
+        lazyImagesObserver.unobserve(image.target);
+        loadImage(image.target);
+      });
+    },
+    lazyImagesOptions
+  );
+
+  images.forEach((image) => lazyImagesObserver.observe(image));
+}
+
+function loadImage(image) {
+  image.setAttribute('src', image.dataset.src);
 }
 
 // function throttle(func, limit) {

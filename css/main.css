@@ -48,29 +48,35 @@ a:visited {
 /* =========== */
 /* BG ELEMENTS */
 /* =========== */
-.bg-img {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -90;
-}
-
 .img-bg {
+  position: relative;
+  z-index: -1;
   margin-top: -10vh;
   margin-bottom: -10vh;
   height: 70vh;
   width: 100vw;
-  background: url('../assets/bg/pink-polygon-bg-1920x1080.png') no-repeat center
-    center/cover;
   background-attachment: fixed;
+  /* trying to hack hardware acceleration here */
+  transform: translate3d(0, 0, 0);
 }
 
-.clear-bg {
-  height: 50vh;
-  width: 100vw;
-  background: transparent;
+.img-bg--blue {
+  background: url('https://gitmasi.com/assets/bg/blue-polygon-bg-3840x2160.png')
+    no-repeat center center/cover;
+}
+
+.img-bg--pink {
+  background: url('https://gitmasi.com/assets/bg/pink-polygon-bg-3840x2160.png')
+    no-repeat center center/cover;
+}
+
+.img-bg--hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 0;
+  height: 100%;
+  width: 100%;
 }
 
 /* ============ */
@@ -80,7 +86,7 @@ a:visited {
 .hero {
   position: relative;
   margin-bottom: -10%;
-  height: 130vh;
+  height: 150vh;
   width: 100%;
 
   display: flex;
@@ -92,7 +98,7 @@ a:visited {
 }
 
 .hero__content {
-  margin-top: -30vh;
+  margin-top: -50vh;
 }
 
 .hero__heading {
@@ -117,7 +123,7 @@ a:visited {
 
 .scroll-arrow {
   position: absolute;
-  bottom: 30vh;
+  bottom: 50vh;
   left: 50%;
   height: fit-content;
 
