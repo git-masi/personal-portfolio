@@ -1,0 +1,22 @@
+{
+  "name": "personal-portfolio",
+  "version": "1.1.0",
+  "description": "Personal portfolio",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/git-masi/personal-portfolio.git"
+  },
+  "author": "Eric Masi",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/git-masi/personal-portfolio/issues"
+  },
+  "homepage": "https://github.com/git-masi/personal-portfolio#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
