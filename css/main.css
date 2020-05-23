@@ -48,6 +48,16 @@ a:visited {
 /* =========== */
 /* BG ELEMENTS */
 /* =========== */
+.img-bg--blue {
+  background: url('https://gitmasi.com/assets/bg/blue-polygon-bg-3840x2160.png')
+    no-repeat center center/cover;
+}
+
+.img-bg--pink {
+  background: url('https://gitmasi.com/assets/bg/pink-polygon-bg-3840x2160.png')
+    no-repeat center center/cover;
+}
+
 .img-bg {
   position: relative;
   z-index: -1;
@@ -58,16 +68,6 @@ a:visited {
   background-attachment: fixed;
   /* trying to hack hardware acceleration here */
   transform: translate3d(0, 0, 0);
-}
-
-.img-bg--blue {
-  background: url('https://gitmasi.com/assets/bg/blue-polygon-bg-3840x2160.png')
-    no-repeat center center/cover;
-}
-
-.img-bg--pink {
-  background: url('https://gitmasi.com/assets/bg/pink-polygon-bg-3840x2160.png')
-    no-repeat center center/cover;
 }
 
 .img-bg--hero {
