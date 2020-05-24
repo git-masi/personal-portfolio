@@ -13,7 +13,6 @@ document.querySelector(
  */
 const screenHeight = window.screen.height;
 
-const heroSection = document.querySelector('.hero');
 const heroHeading = document.querySelector('.hero__heading');
 const heroSubheading = document.querySelector('.hero__subheading');
 const bgImgInnerEls = document.querySelectorAll('.img-bg__inner');
@@ -31,9 +30,6 @@ function update() {
   ticking = false;
 
   if (lastScrollY < screenHeight) {
-    heroSection.style.background = `linear-gradient(to bottom, transparent, rgba(0, 0, 0, ${
-      0 + 0.001 * lastScrollY
-    }))`;
     heroHeading.style.opacity = '1';
     heroHeading.style.animation = 'none';
     heroHeading.style.transform = `translate(-${lastScrollY * 1.35}px, -${
@@ -49,9 +45,15 @@ function update() {
   shadowEls.forEach((el, i) => {
     const clientRect = el.getBoundingClientRect();
     if (clientRect.top >= 0) return;
-    el.style.background = `linear-gradient(to bottom, transparent, rgba(0, 0, 0, ${
-      0 + 0.003 * clientRect.top * -1
-    }))`;
+    if (el.parentElement.classList.contains('img-bg--hero')) {
+      el.style.background = `linear-gradient(to bottom, transparent, rgba(0, 0, 0, ${
+        0 + 0.001 * lastScrollY
+      }))`;
+    } else {
+      el.style.background = `linear-gradient(to bottom, transparent, rgba(0, 0, 0, ${
+        0 + 0.003 * clientRect.top * -1
+      }))`;
+    }
   });
 }
 
