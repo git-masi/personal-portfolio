@@ -1,5 +1,10 @@
 import './css/main.css';
 
+// Set current year in footer
+document.querySelector(
+  '.current-year'
+).textContent = new Date().getUTCFullYear();
+
 /**
  *
  * Generally you'd want to use clientHeight or something other than screen height
@@ -17,7 +22,7 @@ let shadowEls = document.querySelectorAll('.shadow');
 let lastScrollY = 0;
 let ticking = false;
 
-// only listen for scroll events
+// Only listen for scroll events
 window.addEventListener('load', function () {
   window.addEventListener('scroll', onScroll, false);
 });
