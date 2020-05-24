@@ -11,6 +11,8 @@ const screenHeight = window.screen.height;
 const heroSection = document.querySelector('.hero');
 const heroHeading = document.querySelector('.hero__heading');
 const heroSubheading = document.querySelector('.hero__subheading');
+const bgImgInnerEls = document.querySelectorAll('.img-bg__inner');
+let shadowEls = document.querySelectorAll('.shadow');
 
 let lastScrollY = 0;
 let ticking = false;
@@ -38,6 +40,14 @@ function update() {
       lastScrollY * 1.1
     }px) rotate(${lastScrollY / 4}deg)`;
   }
+
+  shadowEls.forEach((el, i) => {
+    const clientRect = el.getBoundingClientRect();
+    if (clientRect.top >= 0) return;
+    el.style.background = `linear-gradient(to bottom, transparent, rgba(0, 0, 0, ${
+      0 + 0.003 * clientRect.top * -1
+    }))`;
+  });
 }
 
 function onScroll() {
@@ -62,7 +72,7 @@ if (!('IntersectionObserver' in window)) {
     threshold: 0.01,
   };
 
-  let lazyImagesObserver = new IntersectionObserver(
+  const lazyImagesObserver = new IntersectionObserver(
     (entries, lazyImagesObserver) => {
       entries.forEach((image) => {
         if (!image.isIntersecting) return;
@@ -74,6 +84,20 @@ if (!('IntersectionObserver' in window)) {
   );
 
   images.forEach((image) => lazyImagesObserver.observe(image));
+
+  const shadowObserver = new IntersectionObserver((entries) => {
+    entries.forEach((shadow) => {
+      if (shadow.isIntersecting) {
+        shadow.target.classList.add('shadow');
+        shadowEls = document.querySelectorAll('.shadow');
+      } else {
+        shadow.target.classList.remove('shadow');
+        shadowEls = document.querySelectorAll('.shadow');
+      }
+    });
+  }, lazyImagesOptions);
+
+  bgImgInnerEls.forEach((el) => shadowObserver.observe(el));
 }
 
 function loadImage(image) {

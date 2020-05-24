@@ -79,6 +79,11 @@ a:visited {
   width: 100%;
 }
 
+.img-bg__inner {
+  height: 100%;
+  width: 100%;
+}
+
 /* ============ */
 /* HERO SECTION */
 /* ============ */
@@ -218,6 +223,8 @@ footer {
   align-items: center;
   text-align: center;
   color: var(--offwhite);
+  background: url('https://gitmasi.com/assets/bg/blue-polygon-bg-3840x2160.png')
+    no-repeat center center/cover;
 }
 
 footer > *:not(:last-child) {
