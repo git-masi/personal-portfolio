@@ -5,6 +5,74 @@ document.querySelector(
   '.current-year'
 ).textContent = new Date().getUTCFullYear();
 
+const projects = [
+  {
+    heading: 'running man messenger',
+    img: 'https://source.unsplash.com/800x450/?japan,sign',
+    text:
+      'Running Man Messenger is a real-time chat application paying homage to AIM. Join rooms, chat with other users, have fun!',
+    builtWith: ['React', 'Nodejs', 'Express', 'Socket.io'],
+    liveUrl: 'https://git-masi.github.io/running-man-messenger-frontend/',
+    gitHubUrl: 'https://git-masi.github.io/running-man-messenger-frontend/',
+  },
+];
+
+const projectSection = document.querySelector('#projectSection');
+
+projects.forEach((project) => {
+  const projectCard = document.createElement('ARTICLE');
+  const cardHeading = document.createElement('H4');
+  const cardImg = document.createElement('IMG');
+  const cardText = document.createElement('DIV');
+  const desc = document.createElement('P');
+  const builtText = document.createElement('P');
+  const techStach = document.createElement('UL');
+  const cardLinks = document.createElement('DIV');
+  const liveLink = document.createElement('A');
+  const gitHubLink = document.createElement('A');
+
+  projectCard.classList.add('project-card');
+  cardHeading.classList.add('project-card__heading');
+  cardImg.classList.add('lazy');
+  cardImg.classList.add('project-card__img');
+  cardText.classList.add('project-card__text');
+  cardLinks.classList.add('project-card__links');
+
+  cardHeading.textContent = project.heading;
+  cardImg.dataset.src = project.img;
+  cardImg.setAttribute('alt', project.heading);
+  desc.textContent = project.text;
+  builtText.textContent = 'Built with:';
+  project.builtWith.forEach((item) => {
+    const li = document.createElement('LI');
+    li.textContent = item;
+    techStach.appendChild(li);
+  });
+
+  liveLink.textContent = 'See It Live';
+  liveLink.classList.add('project-card__link');
+  liveLink.setAttribute('href', project.liveUrl);
+  liveLink.setAttribute('target', '_blank');
+  liveLink.setAttribute('rel', 'noopener noreferrer');
+
+  gitHubLink.textContent = 'GitHub';
+  gitHubLink.classList.add('project-card__link');
+  gitHubLink.setAttribute('href', project.gitHubUrl);
+  gitHubLink.setAttribute('target', '_blank');
+  gitHubLink.setAttribute('rel', 'noopener noreferrer');
+
+  cardLinks.appendChild(liveLink);
+  cardLinks.appendChild(gitHubLink);
+  cardText.appendChild(desc);
+  cardText.appendChild(builtText);
+  cardText.appendChild(techStach);
+  cardText.appendChild(cardLinks);
+  projectCard.appendChild(cardHeading);
+  projectCard.appendChild(cardImg);
+  projectCard.appendChild(cardText);
+  projectSection.appendChild(projectCard);
+});
+
 /**
  *
  * Generally you'd want to use clientHeight or something other than screen height
@@ -110,159 +178,3 @@ if (!('IntersectionObserver' in window)) {
 function loadImage(image) {
   image.setAttribute('src', image.dataset.src);
 }
-
-// function throttle(func, limit) {
-//   let inThrottle = false;
-//   return function () {
-//     const args = arguments;
-//     const context = this;
-//     if (!inThrottle) {
-//       func.apply(context, args);
-//       inThrottle = true;
-//       setTimeout(() => (inThrottle = false), limit);
-//     }
-//   };
-// }
-
-/**
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- */
-// navbar fade effect
-// const navDOM = document.getElementsByClassName('navbar')[0];
-// window.addEventListener('scroll', () => {
-//   if (
-//     window.scrollY > 150 &&
-//     document.body.clientWidth > 550 &&
-//     document.body.clientHeight > 550
-//   ) {
-//     navDOM.style.opacity = 0.6;
-//   } else {
-//     navDOM.style.opacity = 1;
-//   }
-// });
-
-// navDOM.addEventListener('mouseenter', () => {
-//   navDOM.style.opacity = 1;
-// });
-
-// navDOM.addEventListener('mouseleave', () => {
-//   if (
-//     window.scrollY > 160 &&
-//     document.body.clientWidth > 550 &&
-//     document.body.clientHeight > 550
-//   ) {
-//     navDOM.style.opacity = 0.6;
-//   }
-// });
-
-// //hamburger interaction
-
-// const burgerCheckbox = document.querySelector('.toggler');
-// const headerDOM = document.getElementsByTagName('header')[0];
-// burgerCheckbox.addEventListener('click', () => {
-//   if (burgerCheckbox.checked) {
-//     headerDOM.classList.add('display');
-//   } else {
-//     headerDOM.classList.remove('display');
-//   }
-// });
-
-// // project section
-
-// const tileTextHeader = document.querySelectorAll('.text--header');
-// const tileTextBody = document.querySelectorAll('.text--body');
-// const urlBtn = document.querySelectorAll('.text--btn__link');
-// const gitHubBtn = document.querySelectorAll('.text--btn__github');
-
-// const myProjects = [
-//   {
-//     img: './assets/my-project-pictures/bitcoin-data-visualizer.PNG',
-//     title: 'Bitcoin Data Visualizer',
-//     description:
-//       'See historical bitcoin price data graphically displayed and use investment tools to calculate return on investment.',
-//     url: 'https://git-masi.github.io/bitcoin-data-visualizer/#/',
-//     GitHub: 'https://github.com/git-masi/bitcoin-data-visualizer',
-//   },
-//   {
-//     img: './assets/my-project-pictures/react-colors.PNG',
-//     title: 'React Colors - Palette Creator',
-//     description:
-//       'Creat custom color palettes for your next project! Palettes are saved in local storage for future use.',
-//     url: 'https://sharp-yonath-69298a.netlify.com/',
-//     GitHub: 'https://github.com/git-masi/react-color-app',
-//   },
-//   {
-//     img: './assets/my-project-pictures/react-dad-jokes.PNG',
-//     title: 'React Dad Jokes',
-//     description:
-//       'Get dad jokes from the wonderful icanhazdadjoke.com! Vote on jokes you like and the list will sort itself.',
-//     url: 'https://git-masi.github.io/react-dad-jokes/',
-//     GitHub: 'https://github.com/git-masi/react-dad-jokes',
-//   },
-//   {
-//     img: './assets/my-project-pictures/hero-of-time.PNG',
-//     title: 'Timeboxing - Hero of Time',
-//     description:
-//       'Want to be more focused and productive? Then let this app help you with timeboxing!',
-//     url: 'https://git-masi.github.io/timebox-hero-of-time/',
-//     GitHub: 'https://github.com/git-masi/timebox-hero-of-time',
-//   },
-//   {
-//     img: './assets/my-project-pictures/the-pig-game.PNG',
-//     title: 'The Pig Game',
-//     description:
-//       "A one-on-one game of luck. Rack up your score until you reach 100. But don't roll a 1!",
-//     url: 'https://git-masi.github.io/pig-game/',
-//     GitHub: 'https://github.com/git-masi/pig-game',
-//   },
-//   {
-//     img: './assets/my-project-pictures/palindrome-fun.PNG',
-//     title: 'Palindrome Fun',
-//     description:
-//       'Do you like palindromes? This short yet engaging app answers the question: "just how many palindromes are there?"',
-//     url: 'https://git-masi.github.io/palindrome-fun/',
-//     GitHub: 'https://github.com/git-masi/palindrome-fun',
-//   },
-// ];
-
-// for (let i = 0; i < myProjects.length; i++) {
-//   document.querySelectorAll('.flex-tile > .img')[
-//     i
-//   ].style.background = `url(${myProjects[i].img}) no-repeat top center/cover`;
-//   tileTextHeader[i].textContent = myProjects[i].title;
-//   tileTextBody[i].textContent = myProjects[i].description;
-//   urlBtn[i].setAttribute('href', myProjects[i].url);
-//   gitHubBtn[i].setAttribute('href', myProjects[i].GitHub);
-// }
