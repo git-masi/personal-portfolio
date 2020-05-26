@@ -8,12 +8,31 @@ document.querySelector(
 const projects = [
   {
     heading: 'running man messenger',
-    img: 'https://source.unsplash.com/800x450/?japan,sign',
+    img: 'https://gitmasi.com/assets/my-project-pictures/RMM-screenshot.png',
     text:
-      'Running Man Messenger is a real-time chat application paying homage to AIM. Join rooms, chat with other users, have fun!',
+      'Real-time chat application paying homage to AIM. Join rooms, chat with other users, have fun!',
     builtWith: ['React', 'Nodejs', 'Express', 'Socket.io'],
     liveUrl: 'https://git-masi.github.io/running-man-messenger-frontend/',
     gitHubUrl: 'https://git-masi.github.io/running-man-messenger-frontend/',
+  },
+  {
+    heading: 'bitcoin data visualizer',
+    img: 'https://gitmasi.com/assets/my-project-pictures/bitviz-screenshot.png',
+    text:
+      'See historical bitcoin price data graphically displayed, use investment tools to calculate return on investment.',
+    builtWith: ['React', 'Chart.js', 'Bootstrap React', '3rd Party API Data'],
+    liveUrl: 'https://git-masi.github.io/bitcoin-data-visualizer/#/',
+    gitHubUrl: 'https://github.com/git-masi/bitcoin-data-visualizer',
+  },
+  {
+    heading: 'react colors',
+    img:
+      'https://gitmasi.com/assets/my-project-pictures/react-colors-screenshot.png',
+    text:
+      'Creat custom color palettes for your next project! Palettes are saved in local storage for future use.',
+    builtWith: ['React', 'Material UI', 'React Router'],
+    liveUrl: 'https://sharp-yonath-69298a.netlify.app/',
+    gitHubUrl: 'https://github.com/git-masi/react-color-app',
   },
 ];
 
