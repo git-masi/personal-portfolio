@@ -270,7 +270,6 @@ a:visited {
   position: relative;
   padding: 2rem;
   background: #fff;
-  /* box-shadow: 0 3px 3px 2px rgba(0, 0, 0, 0.2); */
   box-shadow: -2px -2px 3px 1px rgba(255, 255, 255, 0.4),
     1px 3px 3px 1px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
@@ -332,7 +331,8 @@ a:visited {
 }
 
 .project-card__link:hover {
-  background: var(--primary);
+  color: var(--primary);
+  background: var(--offwhite);
 }
 
 .connect__img-wrapper {
