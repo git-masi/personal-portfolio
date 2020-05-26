@@ -167,19 +167,32 @@ a:visited {
   filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.3));
 }
 
+.top-triangle,
+.bottom-triangle {
+  height: 10vh;
+  background: var(--offwhite);
+}
+
+/* 1px offset for these two to prevent showing any "seems" between elements */
+.top-triangle {
+  margin-bottom: -1px;
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+}
+
+.bottom-triangle {
+  margin-top: -1px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
 .content-section {
-  min-height: 100vh;
+  padding: 60px 1rem;
+  min-height: 80vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background: var(--offwhite);
-  clip-path: polygon(0 90%, 0 0, 100% 10%, 100% 100%);
-}
-
-.content-section--last {
-  clip-path: polygon(0 100%, 0 0, 100% 10%, 100% 100%);
 }
 
 .content-section--skills {
@@ -197,7 +210,7 @@ a:visited {
   z-index: 99;
   padding: 2rem 3rem;
 
-  background: var(--offwhite);
+  background: #fff;
   border-radius: 100px;
   box-shadow: -2px -2px 3px 1px rgba(255, 255, 255, 0.25),
     3px 3px 3px 1px rgba(0, 0, 0, 0.25);
@@ -250,6 +263,76 @@ a:visited {
   margin: 2rem;
   height: 50px;
   width: 50px;
+}
+
+.project-card {
+  margin-top: 4rem;
+  position: relative;
+  padding: 2rem;
+  background: #fff;
+  /* box-shadow: 0 3px 3px 2px rgba(0, 0, 0, 0.2); */
+  box-shadow: -2px -2px 3px 1px rgba(255, 255, 255, 0.4),
+    1px 3px 3px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+
+  overflow: hidden;
+}
+
+.project-card__heading {
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.project-card__img {
+  width: 500px;
+  height: 400px;
+}
+
+.project-card__text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+
+  color: var(--offwhite);
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  transform: translateX(100%);
+  transition: all 600ms;
+}
+
+.project-card:hover .project-card__text {
+  transform: translateX(0);
+}
+
+.project-card__links {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.project-card__link:link,
+.project-card__link:visited {
+  padding: 1rem 1.5rem;
+  width: 200px;
+  display: inline-block;
+
+  color: var(--offwhite);
+  background: var(--primary-dark);
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  transition: all 300ms;
+}
+
+.project-card__link:hover {
+  background: var(--primary);
 }
 
 .connect__img-wrapper {
