@@ -546,7 +546,7 @@ a:visited {
   }
 }
 
-@media screen and (max-width: 1440) {
+@media screen and (min-width: 701px) and (max-width: 1441px) {
   .img-bg--blue {
     background-image: url('https://gitmasi.com/assets/bg/blue-polygon-bg-1920x1080.png');
   }
