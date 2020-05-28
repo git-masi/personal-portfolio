@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "dev": "parcel index.html main.js",
-    "build": "parcel build index.html"
+    "prebuild": "rm -rf dist",
+    "build": "npm run prebuild && parcel build index.html"
   },
   "repository": {
     "type": "git",
