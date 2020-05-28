@@ -1,6 +1,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow: scroll;
 }
 
 :root {
@@ -106,7 +107,7 @@ a:visited {
 
 .hero {
   position: relative;
-  margin-bottom: -10%;
+  margin-bottom: -10vh;
   height: 150vh;
   width: 100%;
 
@@ -129,6 +130,7 @@ a:visited {
   font-size: 10rem;
   font-weight: 400;
   text-shadow: -0.3rem 0.3rem 0 var(--primary-dark2);
+  text-align: center;
 
   opacity: 0;
   animation: rotateInDownLeft var(--animation-time) ease-out
@@ -169,6 +171,7 @@ a:visited {
 
 .top-triangle,
 .bottom-triangle {
+  display: block;
   height: 10vh;
   background: var(--offwhite);
 }
@@ -176,16 +179,16 @@ a:visited {
 /* 1px offset for these two to prevent showing any "seems" between elements */
 .top-triangle {
   margin-bottom: -1px;
-  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  clip-path: polygon(0 0, 0 100%, 103% 100%);
 }
 
 .bottom-triangle {
   margin-top: -1px;
-  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  clip-path: polygon(0 0, 100% 0, 103% 100%);
 }
 
 .content-section {
-  padding: 60px 1rem;
+  padding: 60px 2rem;
   min-height: 80vh;
   width: 100%;
   display: flex;
@@ -387,9 +390,10 @@ a:visited {
 /* PAGE FOOTER */
 /* =========== */
 
-footer {
+.page-footer {
   height: 20rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -398,7 +402,7 @@ footer {
     no-repeat center center/cover;
 }
 
-footer > *:not(:last-child) {
+.page-footer > *:not(:last-child) {
   margin-right: 1rem;
 }
 
@@ -459,5 +463,95 @@ footer > *:not(:last-child) {
   to {
     color: var(--primary-light2);
     transform: translateY(0);
+  }
+}
+
+/* ============= */
+/* MEDIA QUERIES */
+/* ============= */
+
+@media screen and (max-width: 560px) {
+  .hero__heading {
+    font-size: 8rem;
+  }
+
+  .hero__subheading {
+    font-size: 2rem;
+  }
+
+  #projectSection {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .project-card__img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .project-card__text {
+    position: static;
+    margin-top: 2rem;
+    transform: translate(0);
+  }
+
+  .project-card__links {
+    margin-top: 1rem;
+  }
+
+  .project-card__link {
+    margin-top: 1rem;
+  }
+
+  .connect__link,
+  .connect__spacer {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+
+  .img-bg--blue {
+    background-image: url('https://gitmasi.com/assets/bg/blue-polygon-bg-1280x720.png');
+  }
+
+  .img-bg--pink {
+    background-image: url('https://gitmasi.com/assets/bg/pink-polygon-bg-1280x720.png');
+  }
+
+  .top-triangle,
+  .bottom-triangle {
+    display: none;
+  }
+
+  .content-section--skills {
+    gap: 4px;
+  }
+
+  .content-section__heading {
+    top: -35px;
+  }
+
+  .page-footer__spacer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1440) {
+  .img-bg--blue {
+    background-image: url('https://gitmasi.com/assets/bg/blue-polygon-bg-1920x1080.png');
+  }
+
+  .img-bg--pink {
+    background-image: url('https://gitmasi.com/assets/bg/pink-polygon-bg-1920x1080.png');
   }
 }
